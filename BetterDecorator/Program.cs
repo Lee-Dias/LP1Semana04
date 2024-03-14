@@ -4,6 +4,11 @@ namespace BetterDecorator
 {
     class Program
     {
+        /// <summary>
+        /// converte os argumentos recebidos de string para char e para int
+        /// e chaam o decor
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             char o = char.Parse(args[1]);
@@ -13,7 +18,14 @@ namespace BetterDecorator
 
             Console.WriteLine(Decor(args[0],o,a));
         }
-
+        /// <summary>
+        /// faz dois if's para colocar uma quantidade de char
+        /// recebido atras e a frente da string consoante a quantidade no int 
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="dec"></param>
+        /// <param name="i"></param>
+        /// <returns></returns>
         private static string Decor(string s, char dec, int i)
         {
             string a = "";
