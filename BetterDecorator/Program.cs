@@ -2,6 +2,11 @@
 
 namespace BetterDecorator
 {
+    /// <summary>
+    /// Este programa recebe 3 valores uma string um char e um int 
+    /// o programa devolve a char atras e a frente da string consante o numero 
+    /// no int
+    /// </summary>
     class Program
     {
         /// <summary>
