@@ -11,20 +11,27 @@ namespace BetterDecorator
     {
         /// <summary>
         /// converte os argumentos recebidos de string para char e para int
-        /// e chaam o decor
+        /// e chama o decor, quando o utilizador nao introduz os valores pedidos
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
         {
             if (args.Length != 3)
             {
-                Console.WriteLine(Decor("User did not specify args!",'=',3));
+                Delegar();
+                
             }else {
             char o = char.Parse(args[1]);
             int a = int.Parse(args[2]);
             Console.WriteLine(Decor(args[0],o,a));
             }
 
+        }
+        /// <summary>
+        /// caso utilizador nao introduza nada faz este metodos
+        /// </summary>
+        private static void Delegar(){
+            Console.WriteLine(Decor("User did not specify args!",'=',3));
         }
         /// <summary>
         /// faz dois if's para colocar uma quantidade de char
