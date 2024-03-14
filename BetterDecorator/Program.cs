@@ -16,12 +16,15 @@ namespace BetterDecorator
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            if (args.Length != 3)
+            {
+                Console.WriteLine(Decor("User did not specify args!",'=',3));
+            }else {
             char o = char.Parse(args[1]);
-            
             int a = int.Parse(args[2]);
-
-
             Console.WriteLine(Decor(args[0],o,a));
+            }
+
         }
         /// <summary>
         /// faz dois if's para colocar uma quantidade de char
